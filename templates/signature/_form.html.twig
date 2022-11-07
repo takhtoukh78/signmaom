@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+
+           <div class="container" style="width:750px; margin-top: 50px; background-color:white;padding:8px;margin-bottom: 40px;border-radius:8px;>
+									<div class="row">
+											<div class="form-group">
+											  {{ form_start(form) }}
+												
+										
+										
+											<div class="form-group">
+												<label class="col-form-label">Nom :<span class="text-danger"></span></label>
+												 {{ form_row(form.Nom, { 'attr': {'class': 'form-control'} }) }}
+										</div>
+											<div class="form-group">
+												<label class="col-form-label">Prénom :</label>
+											 {{ form_row(form.Prenom, { 'attr': {'class': 'form-control'} }) }}
+										</div>
+                                        
+											<div class="form-group">
+												<label class="col-form-label">Poste :<span class="text-danger"></span></label>
+											 {{ form_row(form.poste, { 'attr': {'class': 'form-control'} }) }}
+										</div>
+											<div class="form-group">
+												<label class="col-form-label">E-mail </label>
+												{{ form_row(form.mail, { 'attr': {'class': 'form-control'} }) }}
+										</div>
+											<div class="form-group">
+												<label class="col-form-label">Agence :</label>
+												 {{ form_row(form.agence, { 'attr': {'class': 'form-control'} }) }}
+										</div>  
+											<div class="form-group">
+												<label class="col-form-label"> Téléphone mobile : <span class="text-danger"></span></label>
+												 {{ form_row(form.lf, { 'attr': {'class': 'form-control '} }) }}
+										</div>
+											<div class="form-group">
+												<label class="col-form-label">Téléphone fix : </label>
+												{{ form_row(form.ld, { 'attr': {'class': 'form-control'} }) }}
+										</div></div>
+
+				
+				
+				
+<button class="btn" style="background-color: blue; color: white; position:center;" >{{ button_label|default('Générer votre signature') }}</button>     
+    {{ form_end(form) }}
+{% endblock %}
+
